@@ -1,3 +1,6 @@
+//const API = "http://localhost:8090";
+const API = "https://usuaris.iesmanacor.cat";
+
 function notifica(notificacio) {
     if (window.Notification && Notification.permission !== "denied") {
         Notification.requestPermission(function (status) {  // status is "granted", if accepted by user
@@ -47,7 +50,7 @@ async function init(cursos){
             nomAssignatura = nomAssignatura.trim();
             if(nomAssignatura){
                 const submateriaTrobada = grupSelected.submateries.find(s=>s.gestibNom.toLowerCase().includes(nomAssignatura.toLowerCase()));
-                if(submateriaTrobada || nomAssignatura==='Formació en centres de treball' || nomAssignatura.includes("Projecte de ")){
+                if(submateriaTrobada || nomAssignatura==='Formació en centres de treball' || nomAssignatura.includes("Projecte ")){
                     cell.classList.add("iesmanacor-oculta");
                 }
             } else {
@@ -75,22 +78,22 @@ async function init(cursos){
 (async function(){
     console.log("Load dades inicials...");
     console.log("Init cursos...");
-    const cursosFetch = await fetch("http://localhost:8090/api/core/public/curs/llistat");
+    const cursosFetch = await fetch(API+"/api/core/public/curs/llistat");
     const cursos = await cursosFetch.json();
     //console.log(cursos);
 
     console.log("Init grups...");
-    const grupsFetch = await fetch("http://localhost:8090/api/core/public/grup/llistat");
+    const grupsFetch = await fetch(API+"/api/core/public/grup/llistat");
     const grups = await grupsFetch.json();
     //console.log(grups);
 
     console.log("Init submateries...");
-    const submateriesFetch = await fetch("http://localhost:8090/api/core/public/submateria/llistat");
+    const submateriesFetch = await fetch(API+"/api/core/public/submateria/llistat");
     const submateries = await submateriesFetch.json();
     //console.log(submateries);
 
     console.log("Init sessions...");
-    const sessionsFetch = await fetch("http://localhost:8090/api/core/public/sessio/llistat");
+    const sessionsFetch = await fetch(API+"/api/core/public/sessio/llistat");
     const sessions = await sessionsFetch.json();
     //console.log(sessions);
 
