@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Lobster|Montserrat&display=swap');
+
+#esliceu_wrapper{
+    display: block;
+    position: fixed;
+    width: 300px;
+    right: 5px;
+    top: 5px;
+    z-index: 9999;
+    border-radius: 5px;
+    border: solid 1px black;
+    background: #F8F9F9;
+}
+
+#esliceu_header{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 5px;
+    flex-basis: 100%;
+}
+
+#esliceu_header h1{
+    font-family: 'Lobster', cursive;
+    color: black;
+    margin: 5px 0;
+    font-size: 25px;
+    text-shadow: 0 0 20px white;
+    display: flex;
+    justify-content: center;
+}
+
+#esliceu_save, #esliceu_login{
+    background-color: #d32f2f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 0 5px 0px black;
+    transition-duration: 0.8s;
+    width: 200px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+#esliceu_form{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+#esliceu_form label{
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+#esliceu_form input{
+    margin-bottom: 15px;
+}

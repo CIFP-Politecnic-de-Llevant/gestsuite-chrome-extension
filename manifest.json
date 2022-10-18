@@ -1,0 +1,31 @@
+{
+    "name": "GestSuite - Plugin",
+    "version": "1.0",
+    "description": "Plugin per GestSuite",
+    "icons": {
+        "16": "assets/img/icons/favicon-16x16.png",
+        "32": "assets/img/icons/favicon-32x32.png",
+        "96": "assets/img/icons/favicon-96x96.png",
+        "128": "assets/img/icons/favicon-128x128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.letras.com/*",
+                "http://localhost:8090/*",
+                "https://www3.caib.es/xestib/llistes/alumnat/llistaMateriesMatriculades.html*"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "manifest_version": 3
+}
