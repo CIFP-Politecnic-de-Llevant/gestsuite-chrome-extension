@@ -1,5 +1,5 @@
 //const API = "http://localhost:8090";
-const API = "https://usuaris.iesmanacor.cat";
+const API = "https://api.iesmanacor.cat";
 
 function notifica(notificacio) {
     if (window.Notification && Notification.permission !== "denied") {
